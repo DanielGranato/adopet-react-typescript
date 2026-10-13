@@ -5,10 +5,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "tsc && vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"server": "json-server --watch server.json --port 3001"
+		"server": "json-server --watch server.json --port 3001",
+		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.8",
@@ -17,13 +18,14 @@
 		"react-error-boundary": "^6.0.0",
 		"react-router": "^7.6.1",
 		"simple-auth-storage": "^1.0.0",
-		"tailwindcss": "^4.1.8"
+		"tailwindcss": "^4.1.8",
+		"typescript": "^5.8.3"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.25.0",
-		"@tsconfig/vite-react": "^8.1.1",
-		"@types/react": "^19.3.0",
-		"@types/react-dom": "^19.3.0",
+		"@tsconfig/vite-react": "^6.3.5",
+		"@types/react": "^19.1.6",
+		"@types/react-dom": "^19.1.5",
 		"@vitejs/plugin-react": "^4.4.1",
 		"eslint": "^9.25.0",
 		"eslint-plugin-react-hooks": "^5.2.0",
