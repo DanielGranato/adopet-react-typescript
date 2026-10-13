@@ -18,6 +18,8 @@ const Wrapper = ({ children }) => {
 	);
 };
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -59,6 +61,6 @@ const router = createBrowserRouter([
 			</Wrapper>
 		),
 	},
-]);
+], { basename });
 
 export default router;
